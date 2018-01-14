@@ -19,7 +19,7 @@ Of course, about 4 days later, CodeMash released a new and improved app for ever
 
 ## Precompilers: Tues/Weds
 
-I went for the extended CodeMash experience, which includes 2 days of "precompiler" 4-hour sessions in addition to the regular 2 days of 1-hour sessions. I always recommend doing so, especially if your company is sponsoring your attendance (thanks OnShift!). The 4-hour sessions allow you to go significantly more in-depth on a topic, often with hands-on work which can be more useful to people who learn by doing instead of just listening.
+I went for the extended CodeMash experience, which includes 2 days of "precompiler" 4-hour sessions in addition to the regular 2 days of 1-hour sessions. I always recommend doing so, especially if your company is sponsoring your attendance (thanks [OnShift](https://www.onshift.com/about/careers)!). The 4-hour sessions allow you to go significantly more in-depth on a topic, often with hands-on work which can be more useful to people who learn by doing instead of just listening.
 
 My two favorite precompilers:
 

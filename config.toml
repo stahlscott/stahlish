@@ -7,15 +7,15 @@ disqusShortname = "stahlish" # delete this to disable disqus comments
 
 [params]
     author = "Scott Stahl"
-    description = "Developer & teammate"
+    description = "Developer & teammate_"
     githubUsername = "stahlscott"
     accent = "#458091"
     showBorder = true
     backgroundColor = "white"
-    font = "Lato" # should match the name on Google Fonts!
-    highlight = true
+    font = "Open Sans" # should match the name on Google Fonts!
+    highlight = false
     highlightStyle = "solarized-dark"
-    highlightLanguages = ["python", "react", "go"]
+    highlightLanguages = ["python", "javascript"] # https://highlightjs.org/static/demo/
     profilepic = "img/lumberjack.png"
 
 [[menu.main]]
