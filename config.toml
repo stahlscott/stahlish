@@ -2,12 +2,12 @@ baseURL = "https://stahlish.com/"
 languageCode = "en-us"
 title = "Scott Stahl"
 theme = "minimal"
-# disqusShortname = "username" # delete this to disable disqus comments
+disqusShortname = "stahlish" # delete this to disable disqus comments
 # googleAnalytics = ""
 
 [params]
     author = "Scott Stahl"
-    description = "Developer & team builder"
+    description = "Developer & teammate"
     githubUsername = "stahlscott"
     accent = "#458091"
     showBorder = true
@@ -15,7 +15,8 @@ theme = "minimal"
     font = "Lato" # should match the name on Google Fonts!
     highlight = true
     highlightStyle = "solarized-dark"
-    highlightLanguages = ["python", "react"]
+    highlightLanguages = ["python", "react", "go"]
+    profilepic = "img/lumberjack.png"
 
 [[menu.main]]
     url = "/"
@@ -24,7 +25,7 @@ theme = "minimal"
 
 [[menu.main]]
     url = "/post/"
-    name = "Posts"
+    name = "Blog"
     weight = 2
 
 [[menu.main]]
