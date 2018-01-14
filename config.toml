@@ -1,4 +1,4 @@
-baseURL = "https://stahl-scott.firebaseapp.com"
+baseURL = "https://stahlish.com/"
 languageCode = "en-us"
 title = "Scott Stahl"
 theme = "minimal"
@@ -12,7 +12,7 @@ theme = "minimal"
     accent = "#458091"
     showBorder = true
     backgroundColor = "white"
-    font = "Raleway" # should match the name on Google Fonts!
+    font = "Lato" # should match the name on Google Fonts!
     highlight = true
     highlightStyle = "solarized-dark"
     highlightLanguages = ["python", "react"]
