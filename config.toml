@@ -13,8 +13,8 @@ disqusShortname = "stahlish" # delete this to disable disqus comments
     showBorder = true
     backgroundColor = "white"
     font = "Open Sans" # should match the name on Google Fonts!
-    highlight = false
-    highlightStyle = "solarized-dark"
+    highlight = true
+    highlightStyle = "tomorrow-night-eighties"
     highlightLanguages = ["python", "javascript"] # https://highlightjs.org/static/demo/
     profilepic = "img/lumberjack.png"
 
