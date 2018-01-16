@@ -1,0 +1,24 @@
+language: go
+sudo: false
+notifications:
+  email:
+    on_failure: always
+addons:
+  apt:
+    packages:
+    - python3-pygments
+install:
+- go get -v github.com/kardianos/govendor
+- govendor get -v github.com/gohugoio/hugo
+- go install github.com/gohugoio/hugo
+script:
+- hugo version
+- hugo check --verbose
+after_success:
+- hugo --verbose
+deploy:
+  skip_cleanup: true
+  provider: firebase
+  token:
+    secure: MQA92UhjysC/un6gxN6Z0cFEqILki0gQGtU2+dxYbBs3mPnHIrtlMy34tc2ib5IBtQJXcZjiGB2HZXdwF4OV74tQdoiMpKWKCvjzov3J6k1LolZCZ58U3aFRi3doV2s9wdR/PswYLk/mU0u/a1cCcjIDyL9HUGC12DzIzyju7wylEr0fcCbgx3eS5vokaA3Bgl7wfBniuCJT6OHHT4scyJzlMZym1l3VcJGRULXdxLOolHTdU5ogygOGgXDfh3qQhAHbQ+Qp6LQ9NfpTKYpafHYk+8QoLPe/R3VVOiQ8CRCBA/0el+RNa5rKqYg5IcM4ITi2r8mQzDKsaO/XCKiF9gDB/419IQ8gmYdGirmsxoFk2iwEN8C94RTuCInNuO5vE699h3NYVuS9jWK6c/Gq0FISjhRV9Z2F1aZMDCxxPTO6aQqEhjftPkCKURur0bzu5OvETmrhMnkHXM5FZoLLgIEebuJU2tJp1sRVW0UAJTfbC809TY1pzJbz+ed7sDnqqbLM15k6WG/wMxpsjwn1r5drkifDrjw3rPTuLWZE3DCsKqxzXJm6NOplhPPgc7Rlw0JUEeYQ56fiki5MdXsHD9/8xQpi9WktLh9+oTbbIqHOPv2gGTM7oUrBQ6jQsuFNhe43xkCmyZtAAotVS3uq9UXEFz0nqPYhHhKvmzcDSD8=
+  project: stahl-scott

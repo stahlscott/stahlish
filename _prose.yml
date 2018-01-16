@@ -1,0 +1,67 @@
+prose:
+  rooturl: 'content'
+  media: 'static/img'
+  metadata:
+    content/post:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          placeholder: "title"
+      - name: "description"
+        field:
+          element: "textarea"
+          label: "Description"
+          placeholder: "description"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          placeholder: "date: yyyy-mm-dd."
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          options:
+            - name: "python"
+              value: "python"
+            - name: "react"
+              value: "react"
+          alterable: True
+    content/project:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          placeholder: "title"
+      - name: "description"
+        field:
+          element: "textarea"
+          label: "Description"
+          placeholder: "description"
+      - name: "repo"
+        field:
+          element: "textarea"
+          label: "GitHub Repo"
+          placeholder: "repo"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          placeholder: "date: yyyy-mm-dd."
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          options:
+            - name: "python"
+              value: "python"
+            - name: "react"
+              value: "react"
+          alterable: True
+    static:
+      - name: "url"
+        field:
+          element: "text"
+          label: "Url"
+          value: ""
