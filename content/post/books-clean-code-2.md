@@ -1,9 +1,12 @@
 ---
-title: "Books: Clean Code, Chapters 5-?"
-date: 2018-01-15
-tags: ["books", "clean code"]
+title: 'Books: Clean Code, Chapters 5-?'
+date: 'Sun Jan 14 2018 19:00:00 GMT-0500 (EST)'
+tags:
+  - books
+  - clean code
 draft: true
-expiryDate: 2018-01-01
+expiryDate: {}
+published: false
 ---
 
 ### Chapter 5: Formatting
