@@ -27,6 +27,8 @@ prose:
               value: "python"
             - name: "react"
               value: "react"
+            - name: "books"
+              value: "books"
           alterable: True
     content/project:
       - name: "title"
@@ -41,7 +43,7 @@ prose:
           placeholder: "description"
       - name: "repo"
         field:
-          element: "textarea"
+          element: "text"
           label: "GitHub Repo"
           placeholder: "repo"
       - name: "date"

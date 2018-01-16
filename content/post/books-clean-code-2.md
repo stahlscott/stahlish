@@ -4,8 +4,6 @@ date: 'Sun Jan 14 2018 19:00:00 GMT-0500 (EST)'
 tags:
   - books
   - clean code
-draft: true
-expiryDate: {}
 published: false
 ---
 
