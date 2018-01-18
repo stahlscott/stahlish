@@ -29,4 +29,14 @@ Avoid making hybrid objects/data structures. This seems like a point in favor of
 
 ### Chapter 7: Error Handling
 
-TK
+Provide context with your exceptions, so as to help the debugger figure out what's happening as quickly as possible.
+
+Best to wrap your API (seeing a pattern here?) and return a common exception covering individual exceptions.
+
+Special Case Objects can be used to encapsulate special case behavior (object doesn't exist or doesn't fit criteria => return a special case object)
+
+This is huge for us:
+
+> If you are tempted to return null/None from a method, consider throwing an exception or returning a Special Case Object instead.
+
+We return None all the time and frequently do if checks to see if it exists. We should do this far less often per these principles.
