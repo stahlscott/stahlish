@@ -19,4 +19,14 @@ Whitespace & indentation are incredibly useful but should also be used in modera
 
 ### Chapter 6: Objects & Data Structures
 
+Express data in abstract terms.
+
+> Objects hide their data behind abstractions and expose functions that operate on that data. Data structures expose their data and have no meaningful functions.
+
+OO & procedural/functional code are 'virtual opposites' in terms of what they do well vs poorly.
+
+Avoid making hybrid objects/data structures. This seems like a point in favor of n-tier (service, dao, dto/data model). Keep your data models clean and drop all the complex methods into services.
+
+### Chapter 7: Error Handling
+
 TK
