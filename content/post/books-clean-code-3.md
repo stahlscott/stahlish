@@ -1,10 +1,10 @@
 ---
-title: "Books Clean Code 3"
+title: "Books Clean Code, Chapters 9-12"
 date: 2018-01-21
 tags: 
   - books
   - clean code
-published: false
+published: true
 ---
 
 ### Chapter 9: Unit Tests
@@ -17,7 +17,7 @@ The essentials of TDD:
 
 > **Third Law:** You may not write more production code than is sufficient to pass the currently failing test.
 
-The problem is that this massive amount of unit testing can be just as bad as no tests if the tests themselves are not written cleanly, and we tend to look at test code as good if it passes regardless of its structure. The tests will change as we write more code, so you're creating more tech debt by writing dirty test code.
+The problem is that a massive amount of unit testing can be just as bad as no testing if the tests themselves are not written cleanly, and we tend to look at test code as good if it passes regardless of its structure. The tests will change as we write more code, so you're creating more tech debt by writing dirty test code.
 
 > Test code is just as important as production code.
 
@@ -25,14 +25,14 @@ I agree with this:
 
 > Readability is perhaps even more important in unit tests than it is in production code.
 
-Very important to follow an explicit, clean, readable pattern, without any shortcuts. I like to use the following Arrange/Act/Assert pattern:
-1) Arrange: stage data & set expected result variables
-2) Act: execute the production code we're testing
-3) Assert: run your assertions (Hamcrest++) against your expectations
+Very important to follow an explicit, clean, readable pattern, without any shortcuts. Following Arrange/Act/Assert (or Build/Operate/Check, both of which are implementations of Given/When/Then) pattern:
+1. Arrange: stage data & set expected result variables
+2. Act: execute the production code we're testing
+3. Assert: run your assertions (Hamcrest++) against your expectations
 
-This should make any test code I write simple for the reader to understand and modify to their needs. If the arrange step is repeated across methods, extract that to a helper. Easy and clear. This is also similar to Given/When/Then.
+This should make any test code I write simple for the reader to understand and modify to their needs. If the arrange step is repeated across methods, extract that to a helper. Easy and clear.
 
-... as I continue one page further, they describe this exact thing as Build/Operate/Check. My name is catchier though. But they do show code I would describe as "fine" and refactor it with explicit, expressive helper methods to make it even clearer. I will consider doing this in the future.
+They proceed to show code I would describe as "fine" and refactor it with explicit, expressive helper methods to make it even clearer. I will consider doing this in the future.
 
 > Test a single concept in each test function.
 
@@ -40,7 +40,7 @@ They recommend this over "one assert per function" which I agree with. Sometimes
 
 Summary concept: **F.I.R.S.T**
 
-* **Fast** Tests should run quickly. This translates to more unit tests, more mocking.
+* **Fast** Tests should run quickly. This translates to following the test pyramid framework of a large number of unit tests, smaller number of integration, even smaller number of acceptance.
 * **Independent** Test should not depend on each other; they should be able to run in any random order and pass.
 * **Repeatable** Tests should be able to run in any environment with the same results.
 * **Self-Validating** Tests should either pass or fail, not output to a log and require manual checking.
@@ -70,16 +70,31 @@ This is especially true in Python as convention allows several classes per modul
 
 ### Chapter 11: Systems
 
-We frequently delegate construction to the service level thru lazy evaluation, which complicates the class and violates SRP. Why not trust that the thing has already been constructed by main and solve it thru DI?
-
 Programs are like cities: they start small and build up as the population increases and services are needed. You wouldn't have a metropolitan infrastructure for a small town, and a metropolis can't survive without many essential services like mass transit. So they are constructed as needs arise.
 
 > It is a myth that we can get systems "right the first time." Instead, we should implement only today's stories, then refactor and expand the system to implement new stories tomorrow.
 
 Agile! Likewise, systems can grow easily if separation of concerns is proper.
 
-Side note: A lot of this chapter is specific to Java or poorly written/explained or just relatively boring.
+Side note: A lot of this chapter is specific to Java, poorly written/explained or just relatively boring.
 
 ### Chapter 12: Emergence
 
-TK
+Kent Beck's rules of simple design: (in order of importance)
+
+1. Runs all the tests
+2. Contains no duplication
+3. Expresses the intent of the programmer
+4. Minimizes the number of classes and methods
+
+First do step 1, then steps 2-4 until satisfied.
+
+Side note: I'd love to see more examples comprised of real world objects/concepts instead of abstract math stuff.
+
+*EXPRESSIVE* is going to be my keyword for 2018. Make the code obvious, easy to read. Like a YA novel.
+
+> Well-written unit tests are expressive. A primary goal of tests is to document by example.
+
+> All too often we get our code working and then move on to the next problem without giving sufficient thought to making that code easy for the next person to read.
+
+Finally, even though abstraction can be beautiful, it shouldn't be everywhere. 2 line functions are nice but 20 line functions can work well too. Don't abstract yourself into 10 unnecessary additional classes and functions.
