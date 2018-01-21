@@ -1,10 +1,10 @@
 ---
-title: 'Books: Clean Code, Chapters 5-?'
+title: 'Books: Clean Code, Chapters 5-8'
 date: '2018-01-15'
 tags:
   - books
   - clean code
-published: false
+published: true
 ---
 
 ### Chapter 5: Formatting
@@ -40,3 +40,13 @@ This is huge for us:
 > If you are tempted to return null/None from a method, consider throwing an exception or returning a Special Case Object instead.
 
 We return None all the time and frequently do if checks to see if it exists. We should do this far less often per these principles.
+
+### Chapter 8: Boundaries
+
+The discussion here is around integrating third-party software. You might be surprised to learn that they recommend wrapping it in a layer of abstraction.
+
+Good idea to start any implmentation with a set of "learning tests" across your usage scope to ensure the software does what you want, which can be turned into unit tests to be used during package upgrading.
+
+Ok, so it's not just third-party software anymore, now we're talking about any piece of code that needs to be integrated where your understanding of it is on the other side of some impenetrable boundary. They reference a subsystem that has yet to be completely developed by an internal team. The solution to allow them to continue development was to define their own interface then implement an adapter to translate the subsystem API to their own, encapsulating the interaction.
+
+> Good software designs accommodate change without huge investments and rework. When we see code that is out of our control, special care must be taken to protect our investment and make sure future change is not too costly.
