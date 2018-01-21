@@ -50,4 +50,36 @@ Summary concept: **F.I.R.S.T**
 
 ### Chapter 10: Classes
 
+Classes should be small, measured not by number of lines but number of responsibilities. Five methods may seem small but not if it spans a wide area of concern.
+
+> If we cannot derive a concise name for a class, then it's likely too large. The more ambiguous the class name, the more likely it has too many responsibilities.
+
+> We should also be able to write a brief description of the class in about 25 words without using the words if / and / or / but.
+
+Boils down to Single Responsibility Principle.
+
+> Getting software to work and making software clean are two very different activites.
+
+We need to get away from the idea that clean code even *can* be written from the start. We will meander around and come up with six different ways of solving the problem first. Once it works, then we find a way to make it pretty. Writing a book is a different skill than editing/proofreading one.
+
+Eliminate ever changing parameter lists by promoting variables to class level; if several methods share the same variables that are never used by other methods, good sign you have a class that can be extracted.
+
+This is especially true in Python as convention allows several classes per module. Why not make use of the increased flexibility?
+
+> We want to structure our systems so that we muck with them as little as possible when we update them with new or changed features.
+
+### Chapter 11: Systems
+
+We frequently delegate construction to the service level thru lazy evaluation, which complicates the class and violates SRP. Why not trust that the thing has already been constructed by main and solve it thru DI?
+
+Programs are like cities: they start small and build up as the population increases and services are needed. You wouldn't have a metropolitan infrastructure for a small town, and a metropolis can't survive without many essential services like mass transit. So they are constructed as needs arise.
+
+> It is a myth that we can get systems "right the first time." Instead, we should implement only today's stories, then refactor and expand the system to implement new stories tomorrow.
+
+Agile! Likewise, systems can grow easily if separation of concerns is proper.
+
+Side note: A lot of this chapter is specific to Java or poorly written/explained or just relatively boring.
+
+### Chapter 12: Emergence
+
 TK
