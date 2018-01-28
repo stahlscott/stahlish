@@ -1,5 +1,5 @@
 ---
-title: "Books Clean Code, Chapters 9-12"
+title: "Books: Clean Code, Chapters 9-12"
 date: 2018-01-21
 tags: 
   - books
