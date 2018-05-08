@@ -8,9 +8,11 @@ addons:
     packages:
     - python3-pygments
 install:
-- go get -v github.com/kardianos/govendor
-- govendor get -v github.com/gohugoio/hugo
-- go install github.com/gohugoio/hugo
+- go get github.com/magefile/mage
+- go get -d github.com/gohugoio/hugo
+- cd ${GOPATH:-$HOME/go}/src/github.com/gohugoio/hugo
+- mage vendor
+- mage install
 script:
 - hugo version
 - hugo check --verbose
