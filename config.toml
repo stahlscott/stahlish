@@ -16,7 +16,7 @@ disqusShortname = "stahlish" # delete this to disable disqus comments
     highlight = true
     highlightStyle = "tomorrow-night-eighties"
     highlightLanguages = ["python", "javascript"] # https://highlightjs.org/static/demo/
-    profilepic = "img/lumberjack.png"
+    profilepic = "img/coffeeshop.jpg"
 
 [[menu.main]]
     url = "/"
